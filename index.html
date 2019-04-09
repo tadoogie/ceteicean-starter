@@ -17,14 +17,11 @@
     <div id="article1"></div>
     <div id="article2"></div>
     <script>
-      var c1 = new CETEI()
-      c1.getHTML5("data/example.xml", function(data) {
-       document.getElementById("article1").appendChild(data)
-      })
-      var c2 = new CETEI()
-      c2.getHTML5("data/example.xml", function(data) {
-       document.getElementById("article2").appendChild(data)
-      })
+      var c1 = new CETEI();
+      c1.getHTML5("data/testTEI.xml", function(data) {
+       document.getElementById("TEI").innerHTML = "";
+       document.getElementById("TEI").appendChild(data);
+      });
     </script>
   </body>
 
