@@ -17,6 +17,12 @@
     <div id="TEI"></div>
     <script>
       var c1 = new CETEI();
+
+      c1.addBehaviors({
+        namespaces: {
+          mei: "http://www.music-encoding.org/ns/mei"
+        }
+      })
       c1.getHTML5("data/Ps25.mei", function(data) {
        document.getElementById("meiHead").innerHTML = "";
        document.getElementById("meiHead").appendChild(data);
